@@ -1,0 +1,13 @@
+<div class="content">
+  <h1>{{ brandName | uppercase }}</h1>
+  <h1>{{ companyMobileNumber | mobileNumber }}</h1>
+  <input type="text" [(ngModel)]="filteredcolor" />
+  <ul class="list_items">
+    <li
+      *ngFor="let product of products | filter: filteredcolor; let i = index"
+      class="list_item"
+    >
+      <h4>{{ product.type }} - {{ product.color }}</h4>
+    </li>
+  </ul>
+</div>
